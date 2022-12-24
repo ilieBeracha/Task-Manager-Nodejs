@@ -1,0 +1,69 @@
+[
+  {
+    "firstName": "ilie",
+    "lastName": "beracha",
+    "email": "ilieberacha123@gmail.com",
+    "username": "ilieberacha",
+    "password": "12345678",
+    "id": "5bho9sk4lc0gmdc4",
+    "tasks": [
+      {
+        "taskName": "tasks component hedaer",
+        "taskContent": "make a header to the tasks component",
+        "taskDate": "2022-12-30",
+        "taskHour": "20:22",
+        "taskStatus": "todo",
+        "taskId": "5bho912dclc25gm5s"
+      },
+      {
+        "taskName": "css",
+        "taskContent": "finish styling the website",
+        "taskDate": "2022-12-26",
+        "taskHour": "20:22",
+        "taskStatus": "inProgress",
+        "taskId": "5bho912dclc25h8ku"
+      },
+      {
+        "taskName": "Drag and Drop",
+        "taskContent": "Drag and Drop functionallity",
+        "taskDate": "2022-12-24",
+        "taskHour": "19:23",
+        "taskStatus": "completed",
+        "taskId": "5bho912dclc25hwxa"
+      },
+      {
+        "taskName": "other routes",
+        "taskContent": "make the other routes",
+        "taskDate": "2022-12-31",
+        "taskHour": "00:23",
+        "taskStatus": "todo",
+        "taskId": "5bho912dclc25ii6p"
+      },
+      {
+        "taskName": "css landing page",
+        "taskContent": "style the landing page",
+        "taskDate": "2022-12-31",
+        "taskHour": "20:24",
+        "taskStatus": "inProgress",
+        "taskId": "5bho912dclc25j66d"
+      },
+      {
+        "taskName": "search input",
+        "taskContent": "make the search input work on every task",
+        "taskDate": "2022-12-27",
+        "taskHour": "21:24",
+        "taskStatus": "inProgress",
+        "taskId": "5bho912dclc25juov"
+      }
+    ]
+  },
+  {
+    "firstName": "sapir",
+    "lastName": "moskovich",
+    "email": "sapirmo2000@gmail.com",
+    "username": "sapirmo",
+    "password": "54321",
+    "id": "5bho9ntglc0m7kil",
+    "tasks": []
+  }
+]
