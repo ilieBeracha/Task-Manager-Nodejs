@@ -8,52 +8,94 @@
     "id": "5bho9sk4lc0gmdc4",
     "tasks": [
       {
-        "taskName": "tasks component hedaer",
-        "taskContent": "make a header to the tasks component",
-        "taskDate": "2022-12-30",
-        "taskHour": "20:22",
-        "taskStatus": "todo",
-        "taskId": "5bho912dclc25gm5s"
-      },
-      {
-        "taskName": "css",
-        "taskContent": "finish styling the website",
-        "taskDate": "2022-12-26",
-        "taskHour": "20:22",
-        "taskStatus": "inProgress",
-        "taskId": "5bho912dclc25h8ku"
-      },
-      {
-        "taskName": "Drag and Drop",
-        "taskContent": "Drag and Drop functionallity",
-        "taskDate": "2022-12-24",
-        "taskHour": "19:23",
-        "taskStatus": "completed",
-        "taskId": "5bho912dclc25hwxa"
-      },
-      {
-        "taskName": "other routes",
+        "taskName": "other routess",
         "taskContent": "make the other routes",
         "taskDate": "2022-12-31",
-        "taskHour": "00:23",
-        "taskStatus": "todo",
+        "taskPriority": "High",
+        "taskStatus": "completed",
+        "label": "School",
         "taskId": "5bho912dclc25ii6p"
-      },
-      {
-        "taskName": "css landing page",
-        "taskContent": "style the landing page",
-        "taskDate": "2022-12-31",
-        "taskHour": "20:24",
-        "taskStatus": "inProgress",
-        "taskId": "5bho912dclc25j66d"
       },
       {
         "taskName": "search input",
         "taskContent": "make the search input work on every task",
         "taskDate": "2022-12-27",
-        "taskHour": "21:24",
-        "taskStatus": "inProgress",
+        "taskPriority": "Mid",
+        "taskStatus": "completed",
+        "label": "School",
         "taskId": "5bho912dclc25juov"
+      },
+      {
+        "taskName": "css",
+        "taskContent": "finish styling the website",
+        "taskDate": "2022-12-31",
+        "taskPriority": "Low",
+        "taskStatus": "todo",
+        "label": "School",
+        "taskId": "5bho917b8lc4puqrg"
+      },
+      {
+        "taskName": "css landing page",
+        "taskContent": "finish styling the website",
+        "taskDate": "2022-12-28",
+        "taskPriority": "Mid",
+        "taskStatus": "todo",
+        "label": "School",
+        "taskId": "5bho917b8lc4pv46z"
+      },
+      {
+        "taskName": "Drag and Drop",
+        "taskContent": "Drag and Drop functionallity",
+        "taskDate": "2022-12-30",
+        "taskPriority": "High",
+        "taskStatus": "inProgress",
+        "label": "School",
+        "taskId": "5bho917qolc4xd2as"
+      },
+      {
+        "taskName": "Add Dashboard Route",
+        "taskContent": "Dashbord main route for main Statistics",
+        "taskDate": "2022-12-31",
+        "taskPriority": "High",
+        "taskStatus": "inProgress",
+        "label": "School",
+        "taskId": "5bho9t0olc5296i3"
+      },
+      {
+        "taskName": "Component Today Tasks",
+        "taskContent": "make Component for tasks that need to get done today",
+        "taskDate": "2022-12-31",
+        "taskPriority": "Mid",
+        "taskStatus": "inProgress",
+        "label": "School",
+        "taskId": "5bho9t0olc52ah7n"
+      },
+      {
+        "taskName": "change the add task popup",
+        "taskContent": "seperate ",
+        "taskDate": "2022-12-29",
+        "taskPriority": "Mid",
+        "taskStatus": "completed",
+        "label": "School",
+        "taskId": "5bho915qslc6ag814"
+      },
+      {
+        "taskName": "rerendering problem",
+        "taskContent": "check why my editPopUp wont render the new tasks",
+        "taskDate": "2022-12-29",
+        "taskPriority": "High",
+        "taskStatus": "completed",
+        "label": "School",
+        "taskId": "5bho91j4slc86f362"
+      },
+      {
+        "taskName": "Labels Group",
+        "taskContent": "make the lables by group in the dashboard",
+        "taskDate": "2023-01-07",
+        "taskPriority": "High",
+        "taskStatus": "todo",
+        "label": "School",
+        "taskId": "5bho91pdglc9bknwd"
       }
     ]
   },
@@ -65,5 +107,31 @@
     "password": "54321",
     "id": "5bho9ntglc0m7kil",
     "tasks": []
+  },
+  {
+    "firstName": "eCommerce",
+    "lastName": "eCommerce",
+    "email": "ilieberacha123@gmail.com",
+    "username": "eCommerce",
+    "password": "eCommerce",
+    "id": "5bho9ct8lc3vrqch",
+    "tasks": [
+      {
+        "taskName": "Header",
+        "taskContent": "make the Header",
+        "taskDate": "2022-12-31",
+        "taskPriority": "High",
+        "taskStatus": "completed",
+        "taskId": "5bho9ct8lc3vsj1i"
+      },
+      {
+        "taskName": "Color Pallete",
+        "taskContent": "choose colors",
+        "taskDate": "2022-12-31",
+        "taskPriority": "Mid",
+        "taskStatus": "todo",
+        "taskId": "5bho9ct8lc3vtzh7"
+      }
+    ]
   }
 ]

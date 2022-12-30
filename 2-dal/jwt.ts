@@ -5,6 +5,8 @@ import { PRIVATE_KEY } from "./jwtPrivateKey";
 export function generateToken(user: UsersModel) {
     return jwt.sign({
         "sub": user.id,
-        "username": user.username
-    }, PRIVATE_KEY, { expiresIn: "2h" })
+        "username": user.username,
+        "firstName": user.firstName,
+        "lastName": user.lastName
+    }, PRIVATE_KEY, { expiresIn: "2h" });
 }

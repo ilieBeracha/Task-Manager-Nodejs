@@ -1,5 +1,5 @@
 export interface UsersModel {
-    id: string,
+    id: number,
     firstName: string,
     lastName: string,
     username: string,
@@ -12,7 +12,8 @@ export interface TaskModel {
     taskName: string,
     taskContent: string,
     taskDate: string,
-    taskHour: string,
-    taskId?: string
+    taskPriority:string
+    taskId?: number
     taskStatus: string
+    label:string
 }
