@@ -34,8 +34,8 @@ export async function deleteTaskSql(Taskid: number) {
 }
 
 export async function updateTaskSql(id:number,taskChanged: TaskModel) {
-    const { taskName, taskContent, taskDate, taskPriority, taskStatus } = taskChanged
-    const query = `UPDATE tasks SET taskName = '${taskName}',taskContent ='${taskContent}',taskDate = '${taskDate}',taskPriority = '${taskPriority}',taskStatus = '${taskStatus}' WHERE id = '${id}'`
+    const { taskName, taskContent, taskDate, taskPriority, taskStatus,label } = taskChanged    
+    const query = `UPDATE tasks SET taskName = '${taskName}',taskContent ='${taskContent}',taskDate = '${taskDate}',taskPriority = '${taskPriority}',taskStatus = '${taskStatus}',label = '${label}' WHERE id = '${id}'`
     const [result] = await execute(query);
     return result;
 
