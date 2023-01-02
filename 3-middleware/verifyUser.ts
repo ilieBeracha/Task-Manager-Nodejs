@@ -9,7 +9,7 @@ export async function verifyUser(req: Request, res: Response, next: NextFunction
         console.log(res);
         next();
     } catch (e) {
-        console.log('Verify user problem')
+        console.log('Verify user problem' + e)
         res.status(401).send('not verified');
     }
 }

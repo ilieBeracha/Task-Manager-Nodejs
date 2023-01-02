@@ -15,5 +15,7 @@ export interface TaskModel {
     taskPriority:string
     taskId?: number
     taskStatus: string
-    label:string
+    label:string,
+    indexPriority:number,
+    indexPriorityTimeStamp:number
 }

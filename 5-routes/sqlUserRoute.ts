@@ -61,7 +61,9 @@ UserRouteSql.delete('/users/tasks/delete/:taskId', verifyUser, async (req, res) 
 
 UserRouteSql.put('/users/tasks/update/:id', verifyUser, async (req, res) => {
     const task: TaskModel = req.body;
+    console.log(task.indexPriority)
     const id = +req.params.id;
     await updateTaskSql(id, task)
+    res.json(task)
 });
 

@@ -24,6 +24,7 @@
     "uniqid": "^5.4.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.13",
     "@types/uniqid": "^5.3.2"
   }
 }

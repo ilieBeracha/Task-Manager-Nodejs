@@ -15,7 +15,9 @@ export async function addUserSql(user: UsersModel) {
 };
 
 export async function getTasksById(id: number) {
-    const query = `SELECT id, taskName, taskContent, DATE_FORMAT(taskDate, '%Y-%m-%d') as taskDate, taskPriority, taskStatus, label FROM tasks WHERE userId = ${id}`
+    // SELECT * FROM tasks order by indexPriority asc, indexPriorityTimeStamp desc;
+    const query = `SELECT id ,taskName ,taskContent , DATE_FORMAT(taskDate, '%Y-%m-%d') as taskDate ,taskPriority,taskStatus,label FROM tasks order by indexPriority asc, indexPriorityTimeStamp desc`
+    // const query = `SELECT id, taskName, taskContent, DATE_FORMAT(taskDate, '%Y-%m-%d') as taskDate, taskPriority, taskStatus, label FROM tasks WHERE userId = ${id}`
     const results = await execute(query);
     return results[0];
 };
@@ -33,10 +35,9 @@ export async function deleteTaskSql(Taskid: number) {
     return result;
 }
 
-export async function updateTaskSql(id:number,taskChanged: TaskModel) {
-    const { taskName, taskContent, taskDate, taskPriority, taskStatus,label } = taskChanged    
-    const query = `UPDATE tasks SET taskName = '${taskName}',taskContent ='${taskContent}',taskDate = '${taskDate}',taskPriority = '${taskPriority}',taskStatus = '${taskStatus}',label = '${label}' WHERE id = '${id}'`
+export async function updateTaskSql(id: number, taskChanged: TaskModel) {
+    const { taskName, taskContent, taskDate, taskPriority, taskStatus, label, indexPriority,indexPriorityTimeStamp } = taskChanged
+    const query = `UPDATE tasks SET taskName = '${taskName}',taskContent ='${taskContent}',taskDate = '${taskDate}',taskPriority = '${taskPriority}',taskStatus = '${taskStatus}',label = '${label}',indexPriority = '${indexPriority}',indexPriorityTimeStamp= ${indexPriorityTimeStamp} WHERE id = '${id}'`
     const [result] = await execute(query);
     return result;
-
 }
