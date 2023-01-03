@@ -1,7 +1,7 @@
 import express from "express";
 import { generateToken } from "../2-dal/jwt";
 import { verifyUser } from "../3-middleware/verifyUser";
-import { addTaskSql, addUserSql, deleteTaskSql, getTasksById, getUsersSql, updateTaskSql } from "../4-logic/usersLogicSql";
+import { addTaskSql, addUserSql, deleteTaskSql, getTasksById, getUsersSql, updateTaskEditSql, updateTaskSql } from "../4-logic/usersLogicSql";
 import { TaskModel, UsersModel } from "../model/UsersModel";
 
 export const UserRouteSql = express.Router();
@@ -49,6 +49,7 @@ UserRouteSql.post('/users/tasks/add/:id', verifyUser, async (req, res) => {
 
 UserRouteSql.get('/users/tasks/:id', verifyUser, async (req, res) => {
     const { id } = req.params
+    console.log(id)
     const userPosts = await getTasksById(+id)
     res.json(userPosts);
 })
@@ -64,6 +65,12 @@ UserRouteSql.put('/users/tasks/update/:id', verifyUser, async (req, res) => {
     console.log(task.indexPriority)
     const id = +req.params.id;
     await updateTaskSql(id, task)
+    res.json(task)
+});
+UserRouteSql.put('/users/tasks/edit/:id', verifyUser, async (req, res) => {
+    const task: TaskModel = req.body;
+    const id = +req.params.id;
+    await updateTaskEditSql(id, task)
     res.json(task)
 });
 
