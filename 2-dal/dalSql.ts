@@ -1,4 +1,4 @@
-import mySql from 'mysql2';
+import mySql, { OkPacket, RowDataPacket } from 'mysql2';
 
 const pool = mySql.createPool({
     host: 'localhost',
@@ -8,8 +8,8 @@ const pool = mySql.createPool({
     database: 'task_manager'
 });
 
-export function execute(query: string) {
-    return pool.promise().execute(query);
+export function execute<T>(query: string,param?:any[]) {
+    return pool.promise().execute<T & RowDataPacket[]>(query,param);
 };
 
 

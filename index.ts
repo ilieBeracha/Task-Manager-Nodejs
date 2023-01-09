@@ -1,9 +1,14 @@
-import sql from 'mysql2';
 import express, { json } from "express";
 import cors from 'cors';
 // import { UserRoute } from "./5-routes/usersRoute";
-import { UserRouteSql } from './5-routes/sqlUserRoute';
+import { UserRoute } from './5-routes/UserRoute';
+import * as dotenv from 'dotenv'
+import { TasksRoute } from "./5-routes/TasksRoute";
+import { hashedPassword } from "./2-dal/hashedPassword";
+dotenv.config()
 
+
+console.log(hashedPassword('12345678'))
 const server = express();
 
 server.use(json());
@@ -13,9 +18,11 @@ server.use(cors({
 }));
 
 // server.use('/api',UserRoute);
-server.use(UserRouteSql);
+server.use(UserRoute);
+server.use(TasksRoute);
 
 
-server.listen(3080,() => console.log("listening..."))
+server.listen(3080, () => console.log(`listening...`))
 
 
+// put hash password in database
