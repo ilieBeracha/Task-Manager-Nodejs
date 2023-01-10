@@ -6,9 +6,7 @@ import { TaskModel } from "../model/UsersModel";
 export const TasksRoute = express.Router()
 
 TasksRoute.post('/tasks/add/:id', verifyUser, async (req, res) => {
-    const id = req.params.id;
-    console.log(id);
-    
+    const id = req.params.id;    
     const taskBody = req.body
     await addTask(+id, taskBody);
 })
@@ -33,6 +31,8 @@ TasksRoute.put('/tasks/update/:id', verifyUser, async (req, res) => {
     await updateTask(id, task)
     res.json(task)
 });
+
+
 TasksRoute.put('/tasks/edit/:id', verifyUser, async (req, res) => {
     const task: TaskModel = req.body;
     const id = +req.params.id;

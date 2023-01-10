@@ -7,11 +7,10 @@ import { TasksRoute } from "./5-routes/TasksRoute";
 import { hashedPassword } from "./2-dal/hashedPassword";
 dotenv.config()
 
-
-console.log(hashedPassword('12345678'))
 const server = express();
 
 server.use(json());
+
 server.use(cors({
     allowedHeaders: ['*'],
     origin: ['http://localhost:3000']
