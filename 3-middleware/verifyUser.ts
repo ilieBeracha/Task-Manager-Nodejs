@@ -6,10 +6,10 @@ export async function verifyUser(req: Request, res: Response, next: NextFunction
     try {
         let token: any = req.headers.authorization?.substring(7);
         let res = verify(token, PRIVATE_KEY);
-        console.log(res);
+        // console.log(res);
         next();
     } catch (e) {
-        console.log('Verify user problem' + e)
+        // console.log('Verify user problem' + e)
         res.status(401).send('not verified');
     }
 }

@@ -3,7 +3,7 @@ import { TaskModel } from "../model/UsersModel";
 
 
 export async function getTasksById(id: number) {
-    console.log(id);
+    // console.log(id);
     
     const query = `SELECT id ,taskName ,taskContent , DATE_FORMAT(taskDate, '%Y-%m-%d') as taskDate ,taskPriority,taskStatus,label FROM tasks WHERE userId = ${id} order by indexPriority asc, indexPriorityTimeStamp desc `
     const results = await execute(query);
@@ -11,7 +11,7 @@ export async function getTasksById(id: number) {
 };
 
 export async function addTask(id: number, task: TaskModel) {
-    console.log(id);
+    // console.log(id);
     
     const { taskName, taskContent, taskDate, taskPriority, taskStatus, label } = task
     const query = `INSERT INTO tasks(userId,taskName,taskContent,taskDate,taskPriority,taskStatus,label) VALUES(${id},?,?,?,?,?,?)`

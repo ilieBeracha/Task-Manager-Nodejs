@@ -14,4 +14,8 @@ export function execute<T>(query: string,param?:any[]) {
 
 
 
+// const response = await openai.listEngines();
+
+
+
 

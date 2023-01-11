@@ -15,7 +15,7 @@ UserRoute.post('/users/collab', async (req, res) => {
     const { body } = req.body;
     try {
         let user = await getUsersCollab(body);
-        console.log(body);
+        // console.log(body);
 
         if (user) {
             res.status(200).json(user)
@@ -38,7 +38,7 @@ UserRoute.post('/users/register', async (req, res) => {
         res.json(token)
     } catch (e) {
         res.status(400).send(e)
-        console.log(e);
+        // console.log(e);
     }
 })
 

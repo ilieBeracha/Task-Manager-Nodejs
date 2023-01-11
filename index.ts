@@ -5,6 +5,7 @@ import { UserRoute } from './5-routes/UserRoute';
 import * as dotenv from 'dotenv'
 import { TasksRoute } from "./5-routes/TasksRoute";
 import { hashedPassword } from "./2-dal/hashedPassword";
+import { openAiServer } from "./5-routes/openAiRoute";
 dotenv.config()
 
 const server = express();
@@ -19,9 +20,7 @@ server.use(cors({
 // server.use('/api',UserRoute);
 server.use(UserRoute);
 server.use(TasksRoute);
+server.use(openAiServer);
 
 
 server.listen(3080, () => console.log(`listening...`))
-
-
-// put hash password in database
