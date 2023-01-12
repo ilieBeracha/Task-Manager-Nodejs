@@ -5,7 +5,7 @@ import { TaskModel } from "../model/UsersModel";
 export async function getTasksById(id: number) {
     // console.log(id);
     
-    const query = `SELECT id ,taskName ,taskContent , DATE_FORMAT(taskDate, '%Y-%m-%d') as taskDate ,taskPriority,taskStatus,label FROM tasks WHERE userId = ${id} order by indexPriority asc, indexPriorityTimeStamp desc `
+    const query = `SELECT id ,taskName ,taskContent , DATE_FORMAT(taskDate, '%Y-%m-%d') as taskDate ,taskPriority,taskStatus,label,imageUrl FROM tasks WHERE userId = ${id} order by indexPriority asc, indexPriorityTimeStamp desc `
     const results = await execute(query);
     return results[0];
 };

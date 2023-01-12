@@ -17,5 +17,6 @@ export interface TaskModel {
     taskStatus: string
     label:string,
     indexPriority:number,
-    indexPriorityTimeStamp:number
+    indexPriorityTimeStamp:number,
+    imageUrl:string
 }
